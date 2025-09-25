@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/quick-weather/static/css/main.eb4e89eb.css",
+    "main.js": "/quick-weather/static/js/main.571fa64c.js",
+    "static/js/453.fd1eb187.chunk.js": "/quick-weather/static/js/453.fd1eb187.chunk.js",
+    "index.html": "/quick-weather/index.html",
+    "main.eb4e89eb.css.map": "/quick-weather/static/css/main.eb4e89eb.css.map",
+    "main.571fa64c.js.map": "/quick-weather/static/js/main.571fa64c.js.map",
+    "453.fd1eb187.chunk.js.map": "/quick-weather/static/js/453.fd1eb187.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.eb4e89eb.css",
+    "static/js/main.571fa64c.js"
+  ]
+}
