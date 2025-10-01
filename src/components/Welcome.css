@@ -1,0 +1,36 @@
+.welcome-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #282c34;
+}
+
+.welcome-box {
+  text-align: center;
+  background-color: #3a3f4a;
+  padding: 50px;
+  border-radius: 15px;
+  color: white;
+}
+
+.logo {
+  font-size: 5rem;
+}
+
+.start-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #282c34;
+  background-color: #61dafb;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.start-button:hover {
+  background-color: #3bb2d0;
+}
