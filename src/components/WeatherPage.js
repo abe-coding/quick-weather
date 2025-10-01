@@ -7,8 +7,8 @@ const WeatherPage = () => {
   const [selectedCity, setSelectedCity] = useState(null);
   const [weatherData, setWeatherData] = useState(null);
 
-  const openWeatherApiKey = '2ad74e91d2c899e288d44b2dbdd4f5a7';
-  const rapidApiKey = 'f2b709aa8fmshb7e2b9905446c2bp1ceff9jsn539abd6b53c2';
+  const openWeatherApiKey = process.env.REACT_APP_OPENWEATHER_API_KEY;
+  const rapidApiKey = process.env.REACT_APP_RAPIDAPI_KEY;
 
   const geoApiOptions = {
     method: 'GET',
