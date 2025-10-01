@@ -8,33 +8,23 @@ const WeatherPage = () => {
   const [weatherData, setWeatherData] = useState(null);
 
   const openWeatherApiKey = process.env.REACT_APP_OPENWEATHER_API_KEY;
-  const rapidApiKey = process.env.REACT_APP_RAPIDAPI_KEY;
-
-  const geoApiOptions = {
-    method: 'GET',
-    headers: {
-      'X-RapidAPI-Key': rapidApiKey,
-      'X-RapidAPI-Host': 'wft-geo-db.p.rapidapi.com',
-    },
-  };
 
   const loadOptions = async (inputValue) => {
     if (inputValue.length < 3) return [];
 
     try {
       const response = await fetch(
-        `https://wft-geo-db.p.rapidapi.com/v1/geo/cities?minPopulation=50000&namePrefix=${inputValue}&limit=5`,
-        geoApiOptions
+        `https://api.openweathermap.org/geo/1.0/direct?q=${inputValue}&limit=5&appid=${openWeatherApiKey}`
       );
-
       const data = await response.json();
-      return data.data.map((city) => ({
-        value: `${city.latitude} ${city.longitude}`,
-        label: `${city.name}, ${city.countryCode}`,
+      
+      return data.map((city) => ({
+        value: `${city.lat} ${city.lon}`,
+        label: `${city.name}, ${city.country}`,
       }));
 
     } catch (error) {
-      console.error(error);
+      console.error("Gagal mengambil data kota:", error);
       return [];
     }
   };
