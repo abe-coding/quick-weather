@@ -18,7 +18,7 @@
 .env.test.local
 .env.production.local
 
-# secret files
+# secret variables
 .env
 
 npm-debug.log*
